@@ -90,16 +90,17 @@ NEXT_PUBLIC_API_URL=http://localhost:3000
 
 Para cargar datos de ejemplo (30+ productos y múltiples precios especiales):
 
-\`\`\`bash
+```
 npm run seed
-\`\`\`
+# esto por si se han borrado los datos en el cluaster, lo mejor es ejecutarlo.
+```
 
 
 ### 6. Ejecutar en desarrollo
 
-\`\`\`bash
+```
 npm run dev
-\`\`\`
+```
 
 La aplicación estará disponible en \`http://localhost:3000\`
 

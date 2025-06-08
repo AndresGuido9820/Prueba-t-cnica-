@@ -68,7 +68,7 @@ npm install
 
 ### 3. Configurar variables de entorno
 
-Crear un archivo \`.env.local\` en la raíz del proyecto:
+Crear un archivo \`.env\` en la raíz del proyecto:
 
 \`\`\`env
 # MongoDB Connection String - Información Real
@@ -93,13 +93,6 @@ Para cargar datos de ejemplo (30+ productos y múltiples precios especiales):
 npm run seed
 \`\`\`
 
-### 5. Verificar conexión (opcional)
-
-Para probar la conexión a MongoDB:
-
-\`\`\`bash
-node scripts/test-connection.js
-\`\`\`
 
 ### 6. Ejecutar en desarrollo
 
@@ -219,7 +212,7 @@ La aplicación estará disponible en \`http://localhost:3000\`
 - **App Router**: Nueva arquitectura con mejor rendimiento
 - **Server Components**: Renderizado del lado del servidor por defecto
 - **API Routes**: Endpoints REST integrados
-- **TypeScript**: Soporte nativo y optimizado
+- **TypeScript**: Soporte nativo y optimizado, mayor  seguridad con los tipos 
 - **Optimizaciones**: Automáticas para imágenes, fuentes y bundles
 
 ### ¿Por qué TypeScript?
@@ -305,103 +298,19 @@ Apple, Samsung, Sony, Dell, ASUS, Lenovo, Google, OnePlus, Bose, Sennheiser, LG,
 \`\`\`bash
 # Desarrollo
 npm run dev              # Inicia servidor de desarrollo
-npm run build           # Construye para producción
-npm run start           # Inicia servidor de producción
 npm run lint            # Ejecuta ESLint
 
 # Base de datos
 npm run seed            # Pobla la BD con datos de prueba
-node scripts/test-connection.js  # Prueba conexión a MongoDB
+
 
 # Utilidades
 npm run type-check      # Verifica tipos de TypeScript
 \`\`\`
 
-## 🌐 Despliegue
 
-### Vercel (Recomendado)
-1. Conectar repositorio de GitHub a Vercel
-2. Configurar variables de entorno en el dashboard
-3. Deploy automático en cada push
 
-### Variables de Entorno para Producción
-\`\`\`env
-MONGODB_URI=mongodb+srv://...
-NEXT_PUBLIC_APP_URL=https://tu-dominio.vercel.app
-NEXTAUTH_URL=https://tu-dominio.vercel.app
-NEXTAUTH_SECRET=tu-secret-super-seguro
-\`\`\`
 
-### Otras Plataformas Compatibles
-- **Netlify**: Con adaptador para Next.js
-- **Railway**: Soporte nativo para Next.js
-- **Heroku**: Con buildpack de Node.js
-
-## 🧪 Testing y Validación
-
-### Casos de Prueba Recomendados
-
-1. **Funcionalidad básica**:
-   - Navegación entre páginas
-   - Carga de productos sin errores
-   - Responsive design en diferentes dispositivos
-
-2. **Sistema de filtros**:
-   - Búsqueda por texto funcional
-   - Filtros por categoría y precio
-   - Combinación de múltiples filtros
-   - Limpieza de filtros
-
-3. **Precios especiales**:
-   - Consulta con usuarios válidos (USR001-USR006)
-   - Visualización correcta de descuentos
-   - Cálculo preciso de porcentajes
-   - Validación de fechas de vigencia
-
-4. **Gestión de precios**:
-   - Creación de nuevos precios especiales
-   - Actualización de precios existentes
-   - Validaciones de formulario
-   - Manejo de errores
-
-## 📊 Métricas y Rendimiento
-
-### Optimizaciones Implementadas
-- **Lazy Loading**: Imágenes y componentes bajo demanda
-- **Code Splitting**: Bundles optimizados por ruta
-- **React Query Cache**: Reducción de llamadas a API
-- **Índices MongoDB**: Consultas optimizadas
-- **Skeleton Loading**: Mejor percepción de velocidad
-
-### Métricas Objetivo
-- **First Contentful Paint**: < 1.5s
-- **Largest Contentful Paint**: < 2.5s
-- **Cumulative Layout Shift**: < 0.1
-- **Time to Interactive**: < 3s
-
-## 🔒 Seguridad
-
-### Medidas Implementadas
-- **Validación de entrada**: Esquemas Zod en frontend y backend
-- **Sanitización**: Prevención de inyección NoSQL
-- **Rate Limiting**: Control de frecuencia de requests
-- **Error Handling**: No exposición de información sensible
-- **CORS**: Configuración adecuada para APIs
-
-## 🤝 Contribución
-
-### Flujo de Desarrollo
-1. Fork del proyecto
-2. Crear rama para feature (\`git checkout -b feature/nueva-funcionalidad\`)
-3. Commit de cambios (\`git commit -am 'Agregar nueva funcionalidad'\`)
-4. Push a la rama (\`git push origin feature/nueva-funcionalidad\`)
-5. Crear Pull Request
-
-### Estándares de Código
-- **ESLint**: Configuración estricta
-- **Prettier**: Formateo automático
-- **TypeScript**: Tipado estricto
-- **Conventional Commits**: Mensajes de commit estandarizados
 
 ## 📄 Licencia
 
@@ -409,15 +318,14 @@ Este proyecto es parte de una prueba técnica y está disponible bajo licencia M
 
 ## 🔗 Enlaces
 
-- **Repositorio**: [GitHub URL]
-- **Demo en vivo**: [Vercel URL]
+- **Repositorio**: [https://github.com/AndresGuido9820/Prueba-t-cnica-.git]
 - **Documentación API**: Disponible en \`/api\`
-- **Storybook**: [Storybook URL] (si aplica)
+
 
 ---
 
 **Desarrollado por**: Guido Montoya  
-**Email**: [tu-email@ejemplo.com]  
+**Email**: aguido@unal.edu.co]  
 **Fecha**: $(new Date().toLocaleDateString('es-ES'))  
 **Versión**: 1.0.0
 
@@ -428,8 +336,3 @@ Este proyecto es parte de una prueba técnica y está disponible bajo licencia M
 - [ ] Comparación de productos
 - [ ] Reseñas y valoraciones
 - [ ] Historial de precios
-- [ ] Notificaciones push
-- [ ] Modo offline
-- [ ] Exportación de datos
-- [ ] Dashboard de analytics
-- [ ] API GraphQL

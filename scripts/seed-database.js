@@ -10,13 +10,11 @@ const MONGODB_URI = process.env.MONGODB_URI
 if (!MONGODB_URI) {
   console.error("❌ Error: MONGODB_URI no está definida en .env.local")
   console.log("📝 Crea un archivo .env.local con:")
-  console.log(
-    "MONGODB_URI=mongodb+srv://drenviochallenge:m1jWly3uw42cBwp6@drenviochallenge.2efc0.mongodb.net/tienda?retryWrites=true&w=majority",
-  )
+  
   process.exit(1)
 }
 
-console.log("🔗 Usando MongoDB URI:", MONGODB_URI.replace(/\/\/([^:]+):([^@]+)@/, "//***:***@"))
+
 
 // Nombre de la colección actualizado
 const COLECCION_PRECIOS_ESPECIALES = "preciosEspecialesGuidoMontoya25"

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   description: "Sistema de gestión de productos con precios especiales desarrollado con Next.js, React Query y MongoDB",
   keywords: ["tienda", "productos", "precios especiales", "e-commerce", "Next.js", "React", "MongoDB", "TypeScript"],
-  authors: [{ name: "Guido Montoya", url: "https://github.com/tu-usuario" }],
+  authors: [{ name: "Guido Montoya", url: "https://github.com/otaku9820" }],
   creator: "Guido Montoya",
   publisher: "Tienda Productos",
   robots: {

@@ -8,7 +8,7 @@ Sistema completo de gestión de productos con precios especiales desarrollado co
 - **Backend**: API Routes de Next.js con middleware personalizado
 - **Base de datos**: MongoDB con colección `preciosEspecialesGuidoMontoya25`
 - **UI/UX**: Tailwind CSS con componentes de shadcn/ui
-- **Estado**: React Query para gestión de estado del servidor
+- **Estado**: React Query para gestión de estados de peticiones 
 - **Validación**: Esquemas Zod para validación de datos
 - **Temas**: Sistema de temas claro/oscuro
 

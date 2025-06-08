@@ -103,109 +103,76 @@ npm run dev
 La aplicación estará disponible en \`http://localhost:3000\`
 
 ## 🏗️ Estructura del Proyecto
-
-\`\`\`
-├── app/
-│   ├── api/
-│   │   ├── productos/
-│   │   │   ├── route.ts              # API para listar productos con filtros
-│   │   │   └── [id]/route.ts         # API para producto específico
-│   │   └── precios-especiales/
-│   │       └── route.ts              # API para gestión de precios especiales
-│   ├── articulos/
-│   │   ├── page.tsx                  # Página principal del catálogo
-│   │   └── [id]/page.tsx            # Página de detalle del producto
-│   ├── subida/page.tsx              # Página de gestión de precios especiales
-│   ├── layout.tsx                   # Layout principal con providers
-│   ├── page.tsx                     # Página de inicio (redirect)
-│   └── globals.css                  # Estilos globales con variables CSS
-├── components/
-│   ├── productos/
-│   │   ├── tarjeta-producto.tsx     # Componente de tarjeta de producto
-│   │   └── filtros-productos.tsx   # Componente de filtros avanzados
-│   ├── skeletons/                   # Componentes de loading states
-│   ├── ui/                          # Componentes de shadcn/ui
-│   │   ├── imagen-producto.tsx      # Componente optimizado para imágenes
-│   │   └── ...                      # Otros componentes UI
-│   ├── navigation.tsx               # Componente de navegación
-│   └── theme-toggle.tsx            # Selector de tema
-├── hooks/
-│   ├── use-productos.ts            # Hook para gestión de productos
-│   ├── use-producto.ts             # Hook para producto individual
-│   └── use-precios-especiales.ts  # Hook para precios especiales
-├── lib/
-│   ├── mongodb.ts                  # Configuración de MongoDB
-│   ├── validation.ts               # Esquemas de validación Zod
-│   ├── error-handler.ts            # Manejo centralizado de errores
-│   ├── middleware.ts               # Middlewares para APIs
-│   └── utils.ts                    # Utilidades y helpers
-├── providers/
-│   ├── query-provider.tsx          # Provider de React Query
-│   └── theme-provider.tsx          # Provider de temas
-├── services/
-│   └── api.ts                      # Servicios para llamadas a API
-├── types/
-│   ├── index.ts                    # Tipos principales
-│   ├── api.ts                      # Tipos para APIs
-│   └── entities.ts                 # Tipos de entidades
-├── scripts/
-│   ├── seed-database.js            # Script para poblar BD
-│   └── test-connection.js          # Script para probar conexión
-└── README.md
-\`\`\`
+```
+- app/
+  | - api/
+  |   | - productos/
+  |   |   | - route.ts              # API para listar productos con filtros
+  |   |   | - [id]/route.ts         # API para producto específico
+  |   | - precios-especiales/
+  |   |     - route.ts              # API para gestión de precios especiales
+  | - articulos/
+  |   | - page.tsx                  # Página principal del catálogo
+  |   | - [id]/page.tsx            # Página de detalle del producto
+  | - subida/page.tsx              # Página de gestión de precios especiales
+  | - layout.tsx                   # Layout principal con providers
+  | - page.tsx                     # Página de inicio (redirect)
+  | - globals.css                  # Estilos globales con variables CSS
+- components/
+  | - productos/
+  |   | - tarjeta-producto.tsx     # Componente de tarjeta de producto
+  |   | - filtros-productos.tsx    # Componente de filtros avanzados
+  | - skeletons/                   # Componentes de loading states
+  | - ui/                          # Componentes de shadcn/ui
+  |   | - imagen-producto.tsx      # Componente optimizado para imágenes
+  |   | - ...                      # Otros componentes UI
+  | - navigation.tsx               # Componente de navegación
+  | - theme-toggle.tsx             # Selector de tema
+- hooks/
+  | - use-productos.ts            # Hook para gestión de productos
+  | - use-producto.ts             # Hook para producto individual
+  | - use-precios-especiales.ts   # Hook para precios especiales
+- lib/
+  | - mongodb.ts                  # Configuración de MongoDB
+  | - validation.ts               # Esquemas de validación Zod
+  | - error-handler.ts            # Manejo centralizado de errores
+  | - middleware.ts               # Middlewares para APIs
+  | - utils.ts                    # Utilidades y helpers
+- providers/
+  | - query-provider.tsx          # Provider de React Query
+  | - theme-provider.tsx          # Provider de temas
+- services/
+  | - api.ts                      # Servicios para llamadas a API
+- types/
+  | - index.ts                    # Tipos principales
+  | - api.ts                      # Tipos para APIs
+  | - entities.ts                 # Tipos de entidades
+- scripts/
+  | - seed-database.js            # Script para poblar BD
+  | - test-connection.js          # Script para probar conexión
+- README.md
+  ```
 
 ## 🗄️ Estructura de la Base de Datos
 
+
+
 ### Colección: \`productos\`
-\`\`\`
-├── app/
-│   ├── api/
-│   │   ├── productos/
-│   │   │   ├── route.ts              # API para listar productos con filtros
-│   │   │   └── [id]/route.ts         # API para producto específico
-│   │   └── precios-especiales/
-│   │       └── route.ts              # API para gestión de precios especiales
-│   ├── articulos/
-│   │   ├── page.tsx                  # Página principal del catálogo
-│   │   └── [id]/page.tsx            # Página de detalle del producto
-│   ├── subida/page.tsx              # Página de gestión de precios especiales
-│   ├── layout.tsx                   # Layout principal con providers
-│   ├── page.tsx                     # Página de inicio (redirect)
-│   └── globals.css                  # Estilos globales con variables CSS
-├── components/
-│   ├── productos/
-│   │   ├── tarjeta-producto.tsx     # Componente de tarjeta de producto
-│   │   └── filtros-productos.tsx   # Componente de filtros avanzados
-│   ├── skeletons/                   # Componentes de loading states
-│   ├── ui/                          # Componentes de shadcn/ui
-│   │   ├── imagen-producto.tsx      # Componente optimizado para imágenes
-│   │   └── ...                      # Otros componentes UI
-│   ├── navigation.tsx               # Componente de navegación
-│   └── theme-toggle.tsx            # Selector de tema
-├── hooks/
-│   ├── use-productos.ts            # Hook para gestión de productos
-│   ├── use-producto.ts             # Hook para producto individual
-│   └── use-precios-especiales.ts  # Hook para precios especiales
-├── lib/
-│   ├── mongodb.ts                  # Configuración de MongoDB
-│   ├── validation.ts               # Esquemas de validación Zod
-│   ├── error-handler.ts            # Manejo centralizado de errores
-│   ├── middleware.ts               # Middlewares para APIs
-│   └── utils.ts                    # Utilidades y helpers
-├── providers/
-│   ├── query-provider.tsx          # Provider de React Query
-│   └── theme-provider.tsx          # Provider de temas
-├── services/
-│   └── api.ts                      # Servicios para llamadas a API
-├── types/
-│   ├── index.ts                    # Tipos principales
-│   ├── api.ts                      # Tipos para APIs
-│   └── entities.ts                 # Tipos de entidades
-├── scripts/
-│   ├── seed-database.js            # Script para poblar BD
-│   └── test-connection.js          # Script para probar conexión
-└── README.md
-\`\`\`
+```javascript
+{
+  _id: ObjectId,
+  nombre: String,                    // Nombre del producto
+  descripcion: String,               // Descripción detallada
+  precio: Number,                    // Precio actual de ventaAdd commentMore actions
+  precioBase: Number,                // Precio base original
+  categoria: String,                 // Categoría del producto
+  stock: Number,                     // Cantidad en stock
+  imagen: String,                    // URL de la imagen principal
+  sku: String,                       // Código SKU único
+  marca: String,                     // Marca del producto
+  rating: Number                     // Calificación promedio (0-5)
+}
+
 
 ### Colección: \`preciosEspecialesGuidoMontoya25\`
 \`\`\`javascript
@@ -226,7 +193,7 @@ La aplicación estará disponible en \`http://localhost:3000\`
   fechaCreacion: Date,               // Fecha de creación
   fechaActualizacion: Date           // Fecha de última actualización
 }
-\`\`\`
+```
 
 **Índices optimizados:**
 - \`{ usuarioId: 1, clienteId: 1, productoId: 1 }\` (único)

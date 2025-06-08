@@ -72,7 +72,7 @@ Crear un archivo \`.env\` en la raíz del proyecto:
 
 \`\`\`env
 # MongoDB Connection String - Información Real
-MONGODB_URI=mongodb+srv://drenviochallenge:m1jWly3uw42cBwp6@drenviochallenge.2efc0.mongodb.net/tienda?retryWrites=true&w=majority
+MONGODB_URI=Uri proporcionada en el documento de la prueba 
 
 # App URL para metadata
 NEXT_PUBLIC_APP_URL=http://localhost:3000

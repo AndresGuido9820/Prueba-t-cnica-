@@ -63,7 +63,8 @@ cd tienda-productos
 ### 2. Instalar dependencias
 
 \`\`\`bash
-npm install
+npm install --legacy-peer-deps 
+para evitar problemas de conflictos de dependencias 
 \`\`\`
 
 ### 3. Configurar variables de entorno
